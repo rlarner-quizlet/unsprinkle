@@ -16,7 +16,7 @@ const PhotoGridItem = ({ id, src, alt, tags }) => {
           type="image/avif"
           srcSet={avifSrcset.join(',')}
         />
-        <Image src={src} srcSet={jpgSrcset.join(',')}/>
+        <Image alt={alt} src={src} srcSet={jpgSrcset.join(',')}/>
       </picture>
       </Anchor>
       <Tags>
@@ -35,7 +35,7 @@ const Anchor = styled.a`
 `;
 
 const Image = styled.img`
-object-fit: cover;
+  object-fit: cover;
   display: block;
   width: 100%;
   height: 300px;
